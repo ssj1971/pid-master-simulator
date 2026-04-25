@@ -2,47 +2,48 @@ name: Build Android APK
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+      branches: [ main ]
+        workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+        jobs:
+          build:
+              runs-on: ubuntu-latest
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+                  steps:
+                        - uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install
+                              - name: Set up Node.js
+                                      uses: actions/setup-node@v4
+                                              with:
+                                                        node-version: 18
 
-      - name: Build Web App
-        run: |
-          # No build step needed for this vanilla JS app, but we need to ensure the web-dir exists
-          mkdir -p dist
+                                                              - name: Install dependencies
+                                                                      run: npm install
 
-      - name: Add Android Platform
-        run: |
-          npx cap add android
-          npx cap sync android
+                                                                            - name: Build Web App
+                                                                                    run: |
+                                                                                              mkdir -p dist
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
-      - name: Build Android APK
-        run: |
-          cd android
-          chmod +x gradlew
-          ./gradlew assembleDebug
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v3
-        with:
-          name: pid-master-debug-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+                                                                                                    - name: Add Android Platform
+                                                                                                            run: |
+                                                                                                                      npx cap add android
+                                                                                                                                npx cap sync android
+                                                                                                                                
+                                                                                                                                      - name: Set up JDK 17
+                                                                                                                                              uses: actions/setup-java@v4
+                                                                                                                                                      with:
+                                                                                                                                                                java-version: '17'
+                                                                                                                                                                          distribution: 'temurin'
+                                                                                                                                                                          
+                                                                                                                                                                                - name: Build Android APK
+                                                                                                                                                                                        run: |
+                                                                                                                                                                                                  cd android
+                                                                                                                                                                                                            chmod +x gradlew
+                                                                                                                                                                                                                      ./gradlew assembleDebug
+                                                                                                                                                                                                                      
+                                                                                                                                                                                                                            - name: Upload APK
+                                                                                                                                                                                                                                    uses: actions/upload-artifact@v4
+                                                                                                                                                                                                                                            with:
+                                                                                                                                                                                                                                                      name: pid-master-debug-apk
+                                                                                                                                                                                                                                                                path: android/app/build/outputs/apk/debug/app-debug.apk
+                                                                                                                                                                                                                                                                
