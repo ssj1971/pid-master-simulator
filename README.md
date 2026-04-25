@@ -17,10 +17,6 @@
 - 🛠️ **Interactive Tuning**: On-the-fly adjustment of $K_p$, $K_i$, and $K_d$ gains.
 - 🎨 **Futuristic Design**: Sleek dark-mode interface with glassmorphism and smooth animations.
 - 📦 **Desktop Ready**: Packaged as a standalone Windows application.
-- 📱 **Android Support**: Mobile-ready via Capacitor with a dedicated APK.
-
-## 📲 Android Download
-You can download the latest **Android APK** from the [GitHub Actions artifacts](https://github.com/ssj1971/pid-master-simulator/actions) or the [Releases](https://github.com/ssj1971/pid-master-simulator/releases) section.
 
 ## 🚀 Quick Start
 
