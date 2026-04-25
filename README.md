@@ -3,7 +3,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build: Electron](https://img.shields.io/badge/Build-Electron-blue.svg)](https://www.electronjs.org/)
 
-**PID Master** is a high-fidelity, interactive physics simulator designed to master the art of Proportional-Integral-Derivative (PID) control. Whether you are an electronics hobbyist or a robotics engineer, this tool provides a visual playground to tune and understand complex control loops.
+**PID Master** is a high-fidelity, interactive physics simulator designed to master the art of Proportional-Integral-Derivative (PID) control.
+
+### 🌐 [Live Web Test Dashboard](https://ssj1971.github.io/pid-master-simulator/)
+**Try the app directly in your browser!** No installation required.
 
 ![Live Dashboard](./screenshot.png)
 
@@ -14,6 +17,10 @@
 - 🛠️ **Interactive Tuning**: On-the-fly adjustment of $K_p$, $K_i$, and $K_d$ gains.
 - 🎨 **Futuristic Design**: Sleek dark-mode interface with glassmorphism and smooth animations.
 - 📦 **Desktop Ready**: Packaged as a standalone Windows application.
+- 📱 **Android Support**: Mobile-ready via Capacitor with a dedicated APK.
+
+## 📲 Android Download
+You can download the latest **Android APK** from the [GitHub Actions artifacts](https://github.com/ssj1971/pid-master-simulator/actions) or the [Releases](https://github.com/ssj1971/pid-master-simulator/releases) section.
 
 ## 🚀 Quick Start
 
