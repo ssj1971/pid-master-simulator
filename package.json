@@ -1,0 +1,26 @@
+{
+  "name": "pid-robot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win",
+    "package": "electron-packager . PIDMaster --platform=win32 --arch=x64 --out=dist --icon=icon.png --overwrite"
+  },
+  "build": {
+    "appId": "com.antigravity.pidrobot",
+    "win": {
+      "target": "zip"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^41.3.0",
+    "electron-builder": "^26.8.1",
+    "electron-packager": "^17.1.2"
+  }
+}
