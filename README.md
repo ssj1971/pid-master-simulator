@@ -24,5 +24,3 @@
 2. **Watch the telemetry** to identify oscillations, overshoot, or steady-state error.
 3. **Reset and Stress Test** by changing motor power and drag coefficients.
 
----
-*Created with ❤️ by Antigravity AI*
